@@ -1,14 +1,14 @@
 package main
 
 import (
-	"live-chat/db"
+	"chat/pkg/storage"
 	"log"
 )
 
 func main() {
-	_, err := db.NewDatabase()
+	_, err := storage.NewDatabase()
 	if err != nil {
-		log.Fatalf("could not init database connection: &s", err)
+		log.Fatal("could not init database connection: &s", err)
 	}
 
 }
